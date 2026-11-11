@@ -1,16 +1,9 @@
--- =====================================================================
--- GameHub - Catalogo Digital de Jogos
--- Banco: MySQL | Importar com:  mysql -u root -p < database/gamehub.sql
--- Observacao: este script NAO apaga nada. Se o banco ja tiver os dados,
--- rodar de novo causa erro de chave duplicada (e protege os registros).
--- =====================================================================
+
 
 CREATE DATABASE IF NOT EXISTS gamehub DEFAULT CHARACTER SET utf8mb4;
 USE gamehub;
 
--- ---------------------------------------------------------------------
--- TABELAS
--- ---------------------------------------------------------------------
+
 CREATE TABLE IF NOT EXISTS generos (
     id INT PRIMARY KEY AUTO_INCREMENT,
     nome VARCHAR(50) NOT NULL UNIQUE
@@ -34,9 +27,7 @@ CREATE TABLE IF NOT EXISTS jogo_genero (
     FOREIGN KEY (genero_id) REFERENCES generos(id)
 );
 
--- ---------------------------------------------------------------------
--- DADOS INICIAIS: GENEROS
--- ---------------------------------------------------------------------
+
 INSERT INTO generos (id, nome) VALUES
 (1, 'Aventura'),
 (2, 'Ação'),

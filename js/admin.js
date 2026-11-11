@@ -1,4 +1,3 @@
-// admin.js - CRUD de jogos: GET, POST, PUT e DELETE via fetch.
 
 let todosGeneros = [];   // gêneros vindos da API (GET /api/generos)
 
@@ -6,7 +5,6 @@ const formJogo = document.querySelector("#form-jogo");
 const botaoCancelar = document.querySelector("#btn-cancelar");
 
 // ---------- Gêneros (checkboxes criados a partir da API) ----------
-// idsMarcados: ids que devem aparecer marcados (usado na edição)
 function montarGeneros(idsMarcados) {
   const area = document.querySelector("#generos");
   area.innerHTML = "";
@@ -85,7 +83,6 @@ function criarLinha(jogo) {
   const acoes = document.createElement("div");
   acoes.classList.add("acoes");
 
-  // O botão Editar é um link para #painel-form: assim a tela rola até o formulário
   const botaoEditar = document.createElement("a");
   botaoEditar.classList.add("botao", "botao-secundario", "botao-pequeno");
   botaoEditar.setAttribute("href", "#painel-form");
@@ -150,8 +147,7 @@ botaoCancelar.addEventListener("click", function () {
 
 // ---------- CREATE (POST) e UPDATE (PUT) ----------
 formJogo.addEventListener("submit", async function (evento) {
-  // ATENÇÃO (exceção às apostilas): preventDefault() não aparece nas apostilas de DWS.
-  // Sem ele a página recarregaria ao enviar e o fetch seria cancelado.
+
   evento.preventDefault();
 
   // Gêneros marcados (seletor CSS com :checked, via querySelectorAll)

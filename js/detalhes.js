@@ -1,8 +1,6 @@
-// detalhes.js - mostra um jogo. O id chega pela URL: detalhes.html?id=3
 
 async function carregarDetalhes() {
-  // ATENÇÃO (exceção às apostilas): URLSearchParams e window.location.search
-  // não aparecem nas apostilas de DWS. São a única forma de ler "?id=3" no JavaScript.
+  
   const parametros = new URLSearchParams(window.location.search);
   const id = parametros.get("id");
 

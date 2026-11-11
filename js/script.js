@@ -1,4 +1,3 @@
-// script.js - código compartilhado por todas as páginas do GameHub.
 
 // Endereço base da API Flask. Se a API mudar de endereço, altere SOMENTE esta linha.
 const API_URL = "http://127.0.0.1:5000/api";
@@ -27,8 +26,7 @@ function limparMensagem() {
 }
 
 // ---------- Card de jogo (usado no início e no catálogo) ----------
-// pastaImg: caminho até img/jogos/ a partir da página atual
-// paginaDetalhes: caminho até detalhes.html a partir da página atual
+
 function criarCardJogo(jogo, pastaImg, paginaDetalhes) {
   const card = document.createElement("article");
   card.classList.add("card");
@@ -80,7 +78,7 @@ async function carregarDestaques() {
   }
 }
 
-// Só roda na página inicial (a única que tem #destaques)
+
 if (document.querySelector("#destaques")) {
   carregarDestaques();
 }

@@ -1,4 +1,3 @@
-// catalogo.js - lista todos os jogos vindos da API (GET /api/jogos).
 
 async function carregarCatalogo() {
   const lista = document.querySelector("#lista-jogos");
