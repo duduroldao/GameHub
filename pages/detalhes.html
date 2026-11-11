@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detalhes do jogo - GameHub</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="../js/script.js" defer></script>
+  <script src="../js/detalhes.js" defer></script>
+</head>
+<body>
+  <header class="topo">
+    <div class="container">
+      <a class="logo" href="../index.html">Game<span>Hub</span></a>
+      <button class="btn-menu" id="btn-menu" type="button">Menu</button>
+      <nav class="menu" id="menu">
+        <a href="../index.html">Início</a>
+        <a class="ativo" href="catalogo.html">Catálogo</a>
+        <a href="admin.html">Administração</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <p class="mensagem" id="mensagem"></p>
+    <article class="detalhe oculto" id="detalhe">
+      <img class="detalhe-capa" id="det-imagem" src="../img/jogos/padrao.png" alt="Capa do jogo">
+      <div class="detalhe-info">
+        <h1 id="det-titulo"></h1>
+        <dl>
+          <dt>Desenvolvedora</dt>
+          <dd id="det-desenvolvedora"></dd>
+          <dt>Ano de lançamento</dt>
+          <dd id="det-ano"></dd>
+        </dl>
+        <h2>Gêneros</h2>
+        <div class="etiquetas" id="det-generos"></div>
+        <h2>Descrição</h2>
+        <p id="det-descricao"></p>
+        <a class="botao botao-secundario" href="catalogo.html">Voltar ao catálogo</a>
+      </div>
+    </article>
+  </main>
+
+  <footer class="rodape">
+    <div class="container">
+      <span>GameHub - Projeto integrado de DWS, POO e Banco de Dados.</span>
+      <span>Ensino Médio Técnico em Informática</span>
+    </div>
+  </footer>
+</body>
+</html>

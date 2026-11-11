@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Administração - GameHub</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="../js/script.js" defer></script>
+  <script src="../js/admin.js" defer></script>
+</head>
+<body>
+  <header class="topo">
+    <div class="container">
+      <a class="logo" href="../index.html">Game<span>Hub</span></a>
+      <button class="btn-menu" id="btn-menu" type="button">Menu</button>
+      <nav class="menu" id="menu">
+        <a href="../index.html">Início</a>
+        <a href="catalogo.html">Catálogo</a>
+        <a class="ativo" href="admin.html">Administração</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="cabecalho-pagina">
+      <h1>Administração de jogos</h1>
+      <p>Cadastre, edite e exclua jogos. Tudo é salvo no banco de dados MySQL por meio da API.</p>
+    </section>
+    <p class="mensagem" id="mensagem" role="status"></p>
+
+    <div class="admin">
+      <section class="painel painel-form" id="painel-form">
+        <h2 id="titulo-form">Cadastrar novo jogo</h2>
+        <form id="form-jogo">
+          <input type="hidden" id="jogo-id">
+
+          <div class="campo">
+            <label for="titulo">Título</label>
+            <input type="text" id="titulo" name="titulo" required minlength="1" maxlength="100">
+          </div>
+
+          <div class="campo">
+            <label for="desenvolvedora">Desenvolvedora</label>
+            <input type="text" id="desenvolvedora" name="desenvolvedora" required maxlength="100">
+          </div>
+
+          <div class="campo">
+            <label for="ano">Ano de lançamento</label>
+            <input type="number" id="ano" name="ano" required min="1970" max="2100">
+          </div>
+
+          <div class="campo">
+            <label for="imagem">Arquivo da capa</label>
+            <input type="text" id="imagem" name="imagem" placeholder="ex.: minecraft.png" pattern="[^\/\\]*" title="Informe só o nome do arquivo, sem pastas.">
+            <small>O arquivo precisa estar na pasta img/jogos. Se ficar vazio, usa padrao.png.</small>
+          </div>
+
+          <div class="campo">
+            <label for="descricao">Descrição</label>
+            <textarea id="descricao" name="descricao" rows="5" required minlength="10"></textarea>
+          </div>
+
+          <div class="campo">
+            <span><strong>Gêneros</strong> (marque pelo menos um)</span>
+            <div class="generos" id="generos"></div>
+          </div>
+
+          <div class="form-acoes">
+            <button class="botao" type="submit" id="btn-salvar">Salvar jogo</button>
+            <button class="botao botao-secundario oculto" type="button" id="btn-cancelar">Cancelar edição</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="painel">
+        <h2>Jogos cadastrados</h2>
+        <div class="tabela-area">
+          <table>
+            <thead>
+              <tr>
+                <th>Título</th>
+                <th>Desenvolvedora</th>
+                <th>Ano</th>
+                <th>Gêneros</th>
+                <th>Ações</th>
+              </tr>
+            </thead>
+            <tbody id="tabela-jogos"></tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="rodape">
+    <div class="container">
+      <span>GameHub - Projeto integrado de DWS, POO e Banco de Dados.</span>
+      <span>Ensino Médio Técnico em Informática</span>
+    </div>
+  </footer>
+</body>
+</html>
