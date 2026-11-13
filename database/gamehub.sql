@@ -43,9 +43,7 @@ INSERT INTO generos (id, nome) VALUES
 (12, 'Indie'),
 (13, 'Multiplayer');
 
--- ---------------------------------------------------------------------
--- DADOS INICIAIS: 12 JOGOS
--- ---------------------------------------------------------------------
+
 INSERT INTO jogos (id, titulo, desenvolvedora, ano_lancamento, descricao, imagem) VALUES
 (1, 'Minecraft', 'Mojang Studios', 2011,
  'Jogo de construção em mundo de blocos. O jogador coleta recursos, constrói estruturas e explora cenários gerados de forma aleatória, sozinho ou com amigos.',
@@ -84,9 +82,7 @@ INSERT INTO jogos (id, titulo, desenvolvedora, ano_lancamento, descricao, imagem
  'Jogo de corrida com itens e pistas criativas, que reúne personagens da série Mario em disputas para até vários jogadores.',
  'mario-kart-8-deluxe.png');
 
--- ---------------------------------------------------------------------
--- DADOS INICIAIS: JOGO x GENERO
--- ---------------------------------------------------------------------
+
 INSERT INTO jogo_genero (jogo_id, genero_id) VALUES
 (1, 9), (1, 1),
 (2, 1), (2, 2),
@@ -101,9 +97,7 @@ INSERT INTO jogo_genero (jogo_id, genero_id) VALUES
 (11, 9), (11, 1), (11, 2), (11, 12),
 (12, 7), (12, 13);
 
--- ---------------------------------------------------------------------
--- CONSULTAS DE VERIFICACAO
--- ---------------------------------------------------------------------
+
 -- 1) Quantidade de registros (esperado: 12 jogos, 13 generos, 30 ligacoes)
 SELECT COUNT(*) AS total_jogos FROM jogos;
 SELECT COUNT(*) AS total_generos FROM generos;
