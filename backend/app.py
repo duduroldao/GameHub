@@ -1,7 +1,6 @@
 """API REST do GameHub (Flask). Rodar com:  python app.py"""
 from flask import Flask, request, jsonify
 from flask_cors import CORS
-from werkzeug.exceptions import HTTPException
 from dao import JogoDAO, GeneroDAO, ErroBancoDados
 from models import Jogo, ValidacaoError
 
