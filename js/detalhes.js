@@ -1,8 +1,11 @@
 
 async function carregarDetalhes() {
   
-  const parametros = new URLSearchParams(window.location.search);
-  const id = parametros.get("id");
+    const partes = window.location.search.split("?id=");
+  let id = "";
+  if (partes.length === 2) {
+    id = partes[1];
+  }
 
   if (id === null || id === "") {
     mostrarMensagem("Nenhum jogo foi escolhido. Volte ao catálogo e clique em Ver detalhes.", "erro");
