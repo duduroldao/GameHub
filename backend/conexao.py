@@ -10,7 +10,7 @@ class Conexao:
     def __init__(self):
         self.__host = "localhost"
         self.__usuario = "root"
-        self.__senha = "sua_senha_aqui"   # troque pela senha do seu MySQL
+        self.__senha = ""   # troque pela senha do seu MySQL
         self.__banco = "gamehub"
 
     def conectar(self):
