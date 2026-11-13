@@ -19,7 +19,7 @@ def ler_json():
     """Lê o corpo JSON da requisição e garante que é um objeto."""
     try:
         dados = request.json
-    except HTTPException:
+    except Exception:
         raise ValidacaoError("O corpo da requisição deve ser um JSON válido.")
     if not isinstance(dados, dict):
         raise ValidacaoError("O corpo da requisição deve ser um objeto JSON.")
